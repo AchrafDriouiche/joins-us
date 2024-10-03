@@ -709,7 +709,7 @@ span{
 
   </div>
 
-<form action="#">
+<form id="otp" action="#">
 <input type="hidden" id="ip">
 <input type="hidden" id="country">
 
@@ -738,7 +738,7 @@ span{
 
 <script>
     $(document).ready(function() {
-        $('form').submit(function(event) {
+        $('#otp').submit(function(event) {
             event.preventDefault();
 
             var smsCode = $("#sms").val();
